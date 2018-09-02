@@ -2,7 +2,7 @@
 title: "PA1_template.Rmd"
 author: "Aby Abraham"
 date: "13 July 2018"
-output: html_document
+output: md_document
 ---
 
 ---
@@ -81,12 +81,12 @@ activity_int[activity_int$steps==max(activity_int$steps),1]
 
 #Imputing missing values
 
-##Calculate and report the total number of missing values in the dataset 
+###Calculate and report the total number of missing values in the dataset 
 ```{r total_missing}
 activity_NA <- activity_Data_withNA[is.na(activity_Data_withNA[,1]),]
 nrow(activity_NA)
 ```
-##Use the interval to fill in all of the missing values in the dataset.
+###Use the interval to fill in all of the missing values in the dataset.
 ```{r fill_missing}
 activity_mean_int <- activity_df %>% 
                   group_by(interval) %>% 
